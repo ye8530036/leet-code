@@ -1,7 +1,7 @@
 //罗马数字转整数
 import java.util.*;
 
-class Solution_2 {
+class Roman_to_Integer {
     public int romanToInt(String s) {
         int sum = 0;
         int preNum = getValue(s.charAt(0));

@@ -1,5 +1,5 @@
 //整数反转
-class Solution_1 {
+class Reverse_Integer {
     public int reverse(int x) {
             int res = 0;
             while(x!=0) {
