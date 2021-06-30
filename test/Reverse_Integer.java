@@ -1,4 +1,4 @@
-//整数反转
+//整数反转 6_28
 class Reverse_Integer {
     public int reverse(int x) {
             int res = 0;

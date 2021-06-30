@@ -1,4 +1,4 @@
-//最长公共前缀
+//最长公共前缀 6_30
 class Longest_Common_Prefix {
         public String longestCommonPrefix(String[] strs) {
             if(strs.length == 0)
