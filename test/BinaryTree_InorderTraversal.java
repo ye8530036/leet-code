@@ -30,7 +30,7 @@ class BinaryTree_InorderTraversal {
         dfs(res,root.right);
     }
 
-    public class TreeNode {
+    public static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;

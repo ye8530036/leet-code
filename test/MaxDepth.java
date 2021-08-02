@@ -26,7 +26,7 @@ class MaxDepth {
         return Math.max(maxleft,maxright)+1;
     }
 
-    public class TreeNode {
+    public static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
