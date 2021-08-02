@@ -35,7 +35,7 @@ class Is_BalanceTree {
         {
             return 0;
         }
-        else return Math.max(height(root.left),height(root.right)+1);
+        else return Math.max(height(root.left),height(root.right))+1;
 
     }
     public static class TreeNode {
