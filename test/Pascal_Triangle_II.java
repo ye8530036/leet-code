@@ -1,3 +1,5 @@
+import java.util.Arrays;
+import java.util.List;
 /**
  * 杨辉三角
  * ８-6
@@ -13,11 +15,8 @@
  *
  *
  *
- */
+ **/
 
-
-import java.util.Arrays;
-import java.util.List;
 
 class Pascal_Triangle_II {
     public List<Integer> getRow(int rowIndex) {
