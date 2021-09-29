@@ -21,7 +21,7 @@
  */
 
 class HasPathSum {
-    public boolean hasPathSum(Is_SameTree.TreeNode root, int targetSum) {
+    public boolean hasPathSum(TreeNode root, int targetSum) {
         if (root ==null)
         {
             return false;
