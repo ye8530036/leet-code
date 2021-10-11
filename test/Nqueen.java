@@ -34,12 +34,12 @@ import java.util.List;
 
 class Nqueen {
     List<List<String>> res = new ArrayList<>();
-    //主题
+    //主体
     public List<List<String>> solveNQueens(int n) {
         //创建棋盘
         char[][] chessboard = new char[n][n];
         //循环填充.
-        for (char[] c :chessboard){
+        for (char[] c : chessboard){
             Arrays.fill(c,'.');
         }
         //从第0行开始单层搜索
@@ -54,10 +54,10 @@ class Nqueen {
             return;
         }
         for (int col=0;col<n;++col){
-            if (isValid(row,col,n,chessboard)){
+            if (isValid ( row , col , n , chessboard)){
                 chessboard[row][col] = 'Q';
                 //递归主题
-                backTrack(n,row,chessboard);
+                backTrack(n,row+1,chessboard);
                 //回溯部分
                 chessboard[row][col] = '.';
             }
@@ -77,25 +77,29 @@ class Nqueen {
 
 
     //验证棋盘是否符合规则
-    public boolean isValid(int row,int col,int n,char[][] chessboard){
-        //检查列
-        for (int i=0;i<row;++i){
-            if (chessboard[i][col]=='Q'){
+    public boolean isValid(int row, int col, int n, char[][] chessboard) {
+        // 检查列
+        for (int i=0; i<row; ++i) { // 相当于剪枝
+            if (chessboard[i][col] == 'Q') {
                 return false;
             }
         }
-        //检查45°
-        for (int i=row-1,j=col-1;i>=0 && j>=0;i--,j--){
-            if (chessboard[i][col]=='Q'){
+
+        // 检查45度对角线
+        for (int i=row-1, j=col-1; i>=0 && j>=0; i--, j--) {
+            if (chessboard[i][j] == 'Q') {
                 return false;
             }
         }
-        //检查135°
-        for (int i=row+1,j=col-1;i>=0 && j>=0;i--,j--){
-            if (chessboard[i][col]=='Q'){
+
+        // 检查135度对角线
+        for (int i=row-1, j=col+1; i>=0 && j<=n-1; i--, j++) {
+            if (chessboard[i][j] == 'Q') {
                 return false;
             }
         }
         return true;
     }
+
+
 }
