@@ -32,7 +32,7 @@ class BinaryTree_LevelOrderTraversal {
             int size = queue.size();
             /*
             循环添加每一层的元素
-            注意：i不能为0即每层的元素数量不能为0
+            注意：i不可以为0即每层的元素数量不能为0
             */
             for (int i=1;i<=size;++i){
                 //删除队列中第一个元素
