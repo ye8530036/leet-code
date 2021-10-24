@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 二叉树的中序遍历
  * 7-27
@@ -9,10 +12,6 @@
  * 后序遍历：左 - 右 - 中
  *
  */
-
-
-import java.util.ArrayList;
-import java.util.List;
 
 class BinaryTree_InorderTraversal {
 
