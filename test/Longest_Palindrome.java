@@ -14,7 +14,7 @@
 
 class Longest_Palindrome {
     public String longestPalindrome(String s) {
-        if(s==null ||s.length()<2){
+        if(s==null || s.length()<2){
             return s;
         }
         int strLen = s.length();
@@ -29,13 +29,13 @@ class Longest_Palindrome {
         for (int i=1;i<strLen;i++){
             for (int j=0;j<i;j++){
                 //判定是回文子串的条件
-                if (s.charAt(j)==s.charAt(i)&&(i-1<=2 || dp[j+1][i-1]))
+                if (s.charAt(j)==s.charAt(i)&&(i-j<=2 || dp[j+1][i-1]))
                 {
                     //dp[j][i]是回文
                     dp[j][i]=true;
                     if (i-j+1>maxLen){
                         maxLen = i-j+1;
-                        maxStart = 1;
+                        maxStart =j;
                         maxEnd = i;
                     }
                 }
