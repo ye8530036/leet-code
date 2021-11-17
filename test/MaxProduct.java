@@ -11,7 +11,9 @@ class MaxProduct {
             //将词组中的单词一一放入字符串中
             String word = words[i];
             for (int j=0;j< word.length();j++){
-                //利用位运算来对比对照数组中的词组和字符串中的词
+                //利用位运算遍历单词的每个字母word.charAt(j)
+                //masks[i] |= 1<<(word.charAt(j) - 'a');
+                //用masks[i]的0-25位代表a-z是否出现过，出现过就通过或运算置1
                 masks[i] |= 1<<(word.charAt(j) - 'a');
             }
         }
