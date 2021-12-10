@@ -13,18 +13,18 @@ class Shortest_Completing_Word {
         String ans = null;
         //统计words的词频
         for (String s: words){
-            int[] snt =getCnt(s);
+            int[] cur =getCnt(s);
             //价格判断条件
             boolean ok = true;
-            for (int i=0;i<26 &&ok;i++){
+            for (int i=0;i < 26 && ok;i++){
                 //当有字符超出，直接无法匹配
-                if (cnt[i]>snt[i]){
+                if (cnt[i] > cur[i]){
                     ok = false;
                 }
-                //找到合适的单词并取words中最靠前的那个
-                if (ok && (ans==null || ans.length()>s.length())){
-                    ans = s;
-                }
+            }
+            //找到合适的单词并取words中最靠前的那个
+            if (ok && (ans==null || ans.length() > s.length())){
+                ans = s;
             }
         }
         return ans;
@@ -36,7 +36,7 @@ class Shortest_Completing_Word {
             //判断c中为字母的字符，并统计数量
             if (Character.isLetter(c)){
                 //统一将大写转变为小写
-                cnt[Character.toLowerCase(c)-'a']++;
+                cnt[Character.toLowerCase(c) - 'a']++;
             }
         }
         return cnt;
