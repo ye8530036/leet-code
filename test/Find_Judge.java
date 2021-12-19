@@ -17,7 +17,7 @@ class Find_Judge {
             ++outDegree[x];
         }
         //找到法官
-        for (int i=0;i<=n;++i){
+        for (int i=1;i<=n;++i){
             //法官入度为n-1，出度为0
             if (inDegree[i] == n-1 && outDegree[i]==0){
                 return i;
