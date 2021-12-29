@@ -3,7 +3,6 @@
  * 时间：12-29
  * 算法思路：直接循环遍历，枚举所有方法来寻找满足条件的组合
  */
-
 class Count_Quadruplets_1995 {
     public int countQuadruplets(int[] nums) {
         int n = nums.length,ans = 0;
