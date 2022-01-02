@@ -12,8 +12,8 @@ class Construct2DArray_2022 {
             return new int[0][];
         }
         int[][] ans = new int[m][n];
-        for (int i=0;i< original.length;i++){
-            System.arraycopy(original,i,ans[i/n],0,n);
+        for (int i=0;i< original.length;i+=n){
+            System.arraycopy(original,i,ans[ i / n ],0,n);
         }
         return ans;
     }
