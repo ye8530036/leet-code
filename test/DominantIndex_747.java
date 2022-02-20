@@ -6,8 +6,6 @@
  */
 
 
-
-
 class DominantIndex_747 {
     public int dominantIndex(int[] nums) {
         int n = nums.length;
