@@ -29,7 +29,7 @@ class OptimalDivision_553 {
                 sb.append('/');
         }
         if (n>2){
-            sb.insert(sb.indexOf("/")+1,sb.append('('));
+            sb.insert(sb.indexOf("/")+1,'(');
             sb.append(')');
         }
         return sb.toString();
