@@ -3,6 +3,7 @@
  * 时间：2022-3-8
  * 算法：前缀和+二分
  */
+
 class PlatesBetweenCandles_2055 {
     public int[] platesBetweenCandles(String s, int[][] queries) {
         //将字符串s放入数组
