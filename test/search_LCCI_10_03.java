@@ -15,7 +15,7 @@ class search_LCCI_10_03 {
         //设定左右边界及中间量
         int l = 0;
         int r = arr.length-1;
-        int mid = 0;
+        int mid;
         while (l<=r){
             //二分,恰好中间就等于所需值
             mid = l+(r-l)/2;
