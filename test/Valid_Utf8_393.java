@@ -13,6 +13,7 @@
 class Valid_Utf8_393 {
     public boolean validUtf8(int[] data) {
         int n=0;
+
         //循环比对
         for (int datum : data) {
             if (n > 0) {
