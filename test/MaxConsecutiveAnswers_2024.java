@@ -25,6 +25,7 @@ class MaxConsecutiveAnswers_2024 {
         for (int i=0,j=0,cnt=0;i<n;i++){
             if (s.charAt(i)==c)
                 cnt++;
+            //统计T或者F的数量
             while (cnt >_k){
                 if (s.charAt(j)==c){
                     cnt--;
@@ -33,6 +34,7 @@ class MaxConsecutiveAnswers_2024 {
             }
             ans = Math.max(ans,i-j+1);
         }
+        //统计连续字母的长度
         return ans;
     }
 }
