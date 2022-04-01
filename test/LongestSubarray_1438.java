@@ -18,7 +18,7 @@ class LongestSubarray_1438 {
         while (right<n){
             //lastKey()最后一个元素，firstKey()第一个元素
             //getOrDefault() 方法获取指定 key 对应对 value，如果找不到 key ，则返回设置的默认值。
-            map.put(map.lastKey(),map.getOrDefault(nums[right],0)+1);
+            map.put(nums[right], map.getOrDefault(nums[right],0)+1);
             //设定滑动窗口
             while (map.lastKey() - map.firstKey() >limit){
                 map.put(nums[left],map.get(nums[left])-1);
